@@ -17,6 +17,9 @@ brew "zsh-syntax-highlighting"  # colors commands green/red as you type them
 brew "gh"                       # GitHub CLI (PRs, issues, auth) — Go binary, not tied to Node
 brew "oxlint"                   # fast JS/TS linter (also usable per-project as a devDependency)
 
+# ── Fonts ────────────────────────────────────────────────────────────────────
+cask "font-fira-code-nerd-font"  # Nerd Font (icon glyphs) for the Starship prompt
+
 # ── Modern CLI quality-of-life replacements ──────────────────────────────────
 brew "ripgrep"                  # rg  — fast grep that respects .gitignore
 brew "fd"                       # fd  — friendly, fast find
