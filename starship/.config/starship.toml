@@ -1,7 +1,7 @@
 # Starship prompt — https://starship.rs/config/
-# Uses Nerd Font glyphs, written as \uXXXX escapes so the exact codepoints are
-# preserved. Set your terminal font to "FiraCode Nerd Font Mono" to see them.
-# Glyphs used:   git-branch    node    lock
+# Nerd Font glyphs (written via Python so the exact codepoints are preserved).
+# Set your terminal font to "FiraCode Nerd Font Mono" to see them.
+# Glyphs:   git-branch    node    lock
 
 add_newline = true
 
@@ -22,11 +22,11 @@ error_symbol = "[❯](bold red)"
 truncation_length = 3
 truncate_to_repo = true
 style = "bold cyan"
-read_only = "  "        # lock icon shown when the dir isn't writable
+read_only = "  "
 read_only_style = "red"
 
 [git_branch]
-symbol = " "            # git branch glyph
+symbol = " "
 format = "[$symbol$branch]($style) "
 style = "bold purple"
 
@@ -45,7 +45,7 @@ renamed = "»${count} "
 deleted = "✘${count} "
 
 [nodejs]
-symbol = " "            # node.js glyph
+symbol = " "
 format = "[$symbol($version )]($style)"
 style = "bold green"
 detect_files = ["package.json", ".nvmrc"]
