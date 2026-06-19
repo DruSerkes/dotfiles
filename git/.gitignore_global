@@ -1,0 +1,27 @@
+# Global gitignore — applies to every repo (via core.excludesfile in .gitconfig).
+# For things that are about YOUR machine/editor, not any particular project.
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Editors / IDEs
+.idea/
+*.swp
+*.swo
+*~
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Logs & temp
+*.log
+*.tmp
+
+# Secrets — never commit these
+.env
+.env.local
+*.pem

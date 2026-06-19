@@ -1,0 +1,11 @@
+# This repo's own ignore list (separate from git/.gitignore_global, which is for
+# every OTHER repo on the machine).
+.DS_Store
+*.swp
+*.local
+
+# If you ever add a machine-specific or secret file, ignore it here.
+.env
+
+# Claude Code's project-local settings for this working dir (not a dotfile we manage)
+.claude/settings.local.json

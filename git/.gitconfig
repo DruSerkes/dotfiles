@@ -1,0 +1,41 @@
+[user]
+	name = Dru Serkes
+	email = andrewserkes@gmail.com
+
+[init]
+	defaultBranch = main
+
+[core]
+	editor = code --wait
+	excludesfile = ~/.gitignore_global
+	autocrlf = input
+
+[push]
+	default = simple
+	autoSetupRemote = true   ; first push of a new branch sets its upstream automatically
+
+[pull]
+	rebase = false
+
+[fetch]
+	prune = true             ; delete local refs to branches removed on the remote
+
+[diff]
+	colorMoved = default
+
+[color]
+	ui = auto
+
+[alias]
+	st = status
+	co = checkout
+	br = branch
+	cm = commit -m
+	last = log -1 HEAD
+	lg = log --oneline --graph --decorate --all
+	unstage = reset HEAD --
+
+# Want a separate identity for work repos? Add a conditional include, e.g.:
+# [includeIf "gitdir:~/Desktop/Work/"]
+#     path = ~/.gitconfig-work
+# and put [user] email = you@thefarmersdog.com in ~/.gitconfig-work
