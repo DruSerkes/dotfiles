@@ -1,7 +1,7 @@
 # Starship prompt — https://starship.rs/config/
-# Plain-text symbols so it renders without a Nerd Font. Install a Nerd Font
-# (e.g. `brew install --cask font-meslo-lg-nerd-font`) and you can swap in the
-# fancier glyphs from the docs.
+# Uses Nerd Font glyphs, written as \uXXXX escapes so the exact codepoints are
+# preserved. Set your terminal font to "FiraCode Nerd Font Mono" to see them.
+# Glyphs used:   git-branch    node    lock
 
 add_newline = true
 
@@ -22,18 +22,31 @@ error_symbol = "[❯](bold red)"
 truncation_length = 3
 truncate_to_repo = true
 style = "bold cyan"
+read_only = "  "        # lock icon shown when the dir isn't writable
+read_only_style = "red"
 
 [git_branch]
-symbol = ""
-format = "[on $branch]($style) "
+symbol = " "            # git branch glyph
+format = "[$symbol$branch]($style) "
 style = "bold purple"
 
 [git_status]
+format = '([$all_status$ahead_behind]($style) )'
 style = "bold yellow"
+conflicted = "= "
+ahead = "⇡${count} "
+behind = "⇣${count} "
+diverged = "⇕⇡${ahead_count}⇣${behind_count} "
+untracked = "?${count} "
+stashed = "≡${count} "
+modified = "!${count} "
+staged = "+${count} "
+renamed = "»${count} "
+deleted = "✘${count} "
 
 [nodejs]
-symbol = ""
-format = "[node $version]($style) "
+symbol = " "            # node.js glyph
+format = "[$symbol($version )]($style)"
 style = "bold green"
 detect_files = ["package.json", ".nvmrc"]
 
